@@ -1,4 +1,4 @@
-package com.example.raoulworkapp;
+package com.example.Inches_to_Feet;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.raoulworkapp", appContext.getPackageName());
+        assertEquals("com.example.Inches_to_Feet", appContext.getPackageName());
     }
 }
