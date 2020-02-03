@@ -4,118 +4,177 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgsimpleblue"
     tools:context=".InchesToFeet">
 
     <EditText
         android:id="@+id/enterDenominatorID"
-        android:layout_width="88dp"
-        android:layout_height="78dp"
+        android:layout_width="176dp"
+        android:layout_height="61dp"
+        android:background="@android:color/transparent"
         android:ems="10"
+        android:fontFamily="@font/g_light"
+        android:gravity="right|center_vertical"
+        android:hint="@string/enter_denominator"
         android:inputType="number|numberDecimal"
+        android:textColor="#fff"
+        android:textColorHint="#FFFCFC"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintHorizontal_bias="0.821"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356" />
+        app:layout_constraintVertical_bias="0.419" />
 
     <TextView
         android:id="@+id/resultFeetID"
-        android:layout_width="154dp"
-        android:layout_height="45dp"
+        android:layout_width="169dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/g_light"
+        android:textColor="#fff"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintHorizontal_bias="0.731"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.67" />
+        app:layout_constraintVertical_bias="0.769" />
 
     <EditText
         android:id="@+id/enterInchesID"
-        android:layout_width="98dp"
-        android:layout_height="126dp"
+        android:layout_width="149dp"
+        android:layout_height="140dp"
+        android:background="@android:color/transparent"
         android:ems="10"
-        android:hint="Enter Inches"
+        android:fontFamily="@font/g_light"
+        android:gravity="right|center_vertical"
+        android:hint="INCHES"
         android:inputType="number"
+        android:textColor="#fff"
+        android:textColorHint="#FFFCFC"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257" />
+        app:layout_constraintVertical_bias="0.329" />
 
     <Button
         android:id="@+id/convertButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="179dp"
+        android:layout_height="62dp"
+        android:fontFamily="@font/g_light"
         android:text="@string/convert_button"
         app:layout_constraintBottom_toTopOf="@+id/resultFeetID"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enterInchesID"
-        app:layout_constraintVertical_bias="0.516" />
+        app:layout_constraintVertical_bias="0.619" />
 
     <TextView
         android:id="@+id/feetResultTextViewID"
-        android:layout_width="85dp"
-        android:layout_height="28dp"
-        android:text="Feet"
+        android:layout_width="100dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/g_light"
+        android:text="@string/feet_result"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/resultFeetID"
-        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664" />
+        app:layout_constraintVertical_bias="0.77" />
 
     <TextView
         android:id="@+id/inchesResultTextViewID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="inches"
+        android:layout_width="100dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/g_light"
+        android:text="@string/inches_result"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/resultInchesID"
-        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/feetResultTextViewID"
-        app:layout_constraintVertical_bias="0.461" />
+        app:layout_constraintVertical_bias="0.228" />
 
     <TextView
         android:id="@+id/resultInchesID"
-        android:layout_width="136dp"
-        android:layout_height="26dp"
+        android:layout_width="169dp"
+        android:layout_height="53dp"
         android:layout_marginEnd="52dp"
         android:layout_marginRight="52dp"
+        android:fontFamily="@font/g_light"
+        android:textColor="#fff"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultFeetID"
-        app:layout_constraintVertical_bias="0.436" />
+        app:layout_constraintVertical_bias="0.21" />
 
     <EditText
         android:id="@+id/enterNumeratorID"
-        android:layout_width="88dp"
-        android:layout_height="78dp"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
+        android:background="@android:color/transparent"
         android:ems="10"
-        android:inputType="number|textPersonName"
+        android:fontFamily="@font/g_light"
+        android:gravity="right|center_vertical"
+        android:hint="@string/enter_numerator"
+        android:inputType="number"
+        android:textColor="#fff"
+        android:textColorHint="#FFFCFC"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194" />
+        app:layout_constraintVertical_bias="0.325" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="109dp"
-        android:layout_height="130dp"
-        app:layout_constraintBottom_toTopOf="@+id/enterDenominatorID"
+        android:layout_width="191dp"
+        android:layout_height="161dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintHorizontal_bias="0.709"
         app:layout_constraintStart_toEndOf="@+id/enterInchesID"
-        app:layout_constraintTop_toBottomOf="@+id/enterNumeratorID"
-        app:layout_constraintVertical_bias="0.421"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.343"
         app:srcCompat="@drawable/straightline" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="343dp"
+        android:layout_height="61dp"
+        app:layout_constraintBottom_toTopOf="@+id/convertButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052"
+        app:srcCompat="@drawable/intoft" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="293dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fractionofin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

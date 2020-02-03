@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">Raoul Work App</string>
+    <string name="app_name">Inches To Feet Calculator</string>
     <string name="convert_button">Convert Button</string>
     <string name="converion_button">Inches to Feet</string>
     <string name="calculator_button">Calculator</string>
+    <string name="enter_numerator">"NUMERATOR\"   "</string>
+    <string name="enter_denominator" translatable="false">DENOMINATOR\"</string>
+    <string name="feet_result">FEET:</string>
+    <string name="inches_result">INCHES:</string>
+    <string name="fraction_of_inch_button">CONVERT FRACTION OF AN INCH</string>
 </resources>

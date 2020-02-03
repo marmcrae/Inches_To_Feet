@@ -10,25 +10,62 @@
 
     <Button
         android:id="@+id/conversionButtonID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/converion_button"
+        android:layout_width="255dp"
+        android:layout_height="71dp"
+        android:fontFamily="@font/g_light"
+        android:text="@string/fraction_of_inch_button"
         app:layout_constraintBottom_toTopOf="@+id/calculatorButtonID"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.907" />
+        app:layout_constraintVertical_bias="0.889" />
 
     <Button
         android:id="@+id/calculatorButtonID"
-        android:layout_width="137dp"
-        android:layout_height="48dp"
+        android:layout_width="169dp"
+        android:layout_height="61dp"
+        android:fontFamily="@font/g_light"
         android:text="@string/calculator_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/conversionButtonID"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/conversionButtonID"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657" />
+        app:layout_constraintVertical_bias="0.594" />
+
+    <ImageView
+        android:id="@+id/calcTitleImageView"
+        android:layout_width="320dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/conversionButtonID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.339"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.169"
+        app:srcCompat="@drawable/mainactgraph" />
+
+    <ImageView
+        android:id="@+id/panelImageView"
+        android:layout_width="198dp"
+        android:layout_height="174dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculatorButtonID"
+        app:srcCompat="@drawable/panel" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="312dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/conversionButtonID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcTitleImageView"
+        app:layout_constraintVertical_bias="0.695"
+        app:srcCompat="@drawable/calctype" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
