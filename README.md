@@ -1,8 +1,8 @@
 # Inches_To_Feet_Calculator
 
-Clean and easy to use conversion calculator that converts inches as a fraction or decimals into Feet and inches. 
+Clean and easy to use conversion calculator that converts inches as a fraction or decimal into feet and inches. 
 Includes a regular calculator for general calculations. 
-Perfect for construction, solar, and carpentry work.
+Perfect for construction, solar, and/or carpentry work.
 
 ![image](https://user-images.githubusercontent.com/56138234/73701120-93f69d00-468c-11ea-9f1a-7f05cd88196d.png)
 ![image](https://user-images.githubusercontent.com/56138234/73701321-4169b080-468d-11ea-87e9-dd72336830bd.png)
