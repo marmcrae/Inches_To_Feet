@@ -11,20 +11,20 @@
     <include
         layout="@layout/input_layout"
         android:layout_width="match_parent"
-        android:layout_height="139dp" />
+        android:layout_height="wrap_content" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:gravity="bottom"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
         android:background="#373331"
-        android:layout_height="match_parent">
+        android:gravity="bottom|end">
 
 
         <include
             layout="@layout/buttons"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="bottom|fill" />
+            android:layout_height="match_parent" />
 
 
     </RelativeLayout>
