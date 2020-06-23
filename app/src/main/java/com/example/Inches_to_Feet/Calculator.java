@@ -20,6 +20,7 @@ public class Calculator extends AppCompatActivity {
     Button btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btnPercent,btnPlus,btnMinus,btnMultiply,btnDivision,btnEqual,btnFtEqual, btnClear,btnDot,btnBracket;
     public TextView tvInput,tvOutput, inchesOutput;
     String process;
+    String finalResult = "";
     boolean checkBracket = false;
 
     @Override
@@ -225,6 +226,12 @@ public class Calculator extends AppCompatActivity {
         btnEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if( tvInput.getText().equals("")) {
+                    inchesOutput.setText("ERROR: input cannot be empty");
+                    inchesOutput.setTextColor(Color.RED);
+                }
+
                 process = tvInput.getText().toString();
 
                 process = process.replaceAll("×","*");
@@ -235,7 +242,7 @@ public class Calculator extends AppCompatActivity {
 
                 rhino.setOptimizationLevel(-1);
 
-                String finalResult = "";
+                //String finalResult = "";
 
                 try {
                     Scriptable scriptable = rhino.initStandardObjects();
@@ -247,6 +254,10 @@ public class Calculator extends AppCompatActivity {
                 tvOutput.setText(finalResult);
             }
 
+
+
+
+
         });
 
 
@@ -257,12 +268,45 @@ public class Calculator extends AppCompatActivity {
                 double resultFeet = 0.0;
                 double resultInches = 0.0;
 
+                if( !tvInput.getText().equals("") && tvOutput.getText().equals("")) {
 
-                if (tvInput.getText().equals("")) {
+                    try {
+                        double feetValue = Double.parseDouble(tvInput.getText().toString());
+                        double inchesValue = Double.parseDouble(tvInput.getText().toString());
+
+                        resultFeet = feetValue / multiplier;
+                        resultInches = inchesValue % multiplier;
+                        decimalFormat.setRoundingMode(RoundingMode.DOWN);
 
 
-                    tvOutput.setTextColor(Color.RED);
-                } else {
+                        inchesOutput.setText("Feet: " + decimalFormat.format(resultFeet) + "  " + "Inches: " + decimalFormatIn.format(resultInches));
+
+                    }catch (NumberFormatException exception) {
+                        inchesOutput.setText("ERROR: Check Input");
+                        inchesOutput.setTextColor(Color.RED);
+                    }
+                } else if ( tvOutput.getText().equals(finalResult)){
+                    double feetValue = Double.parseDouble(tvOutput.getText().toString());
+                    double inchesValue = Double.parseDouble(tvOutput.getText().toString());
+
+                    resultFeet = feetValue / multiplier;
+                    resultInches = inchesValue % multiplier;
+                    decimalFormat.setRoundingMode(RoundingMode.DOWN);
+
+
+                    inchesOutput.setText("Feet: " + decimalFormat.format(resultFeet) + "  "  + "Inches: " + decimalFormatIn.format (resultInches));
+
+
+
+                } else if( tvInput.getText().equals("")) {
+                    inchesOutput.setText("ERROR: Input Cannot Be Empty");
+                    inchesOutput.setTextColor(Color.RED);
+
+
+
+                }else{
+
+
                     double feetValue = Double.parseDouble(tvInput.getText().toString());
                     double inchesValue = Double.parseDouble(tvInput.getText().toString());
 
@@ -270,8 +314,8 @@ public class Calculator extends AppCompatActivity {
                     resultInches = inchesValue % multiplier;
                     decimalFormat.setRoundingMode(RoundingMode.DOWN);
 
-                    tvOutput.setText("Feet: " + decimalFormat.format(resultFeet));
-                    inchesOutput.setText("Inches: " + decimalFormatIn.format (resultInches));
+
+
                 }
             }
         });
